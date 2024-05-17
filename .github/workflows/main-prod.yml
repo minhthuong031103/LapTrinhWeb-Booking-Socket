@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 18.x ]
+        node-version: [18.x]
     steps:
       - uses: actions/checkout@v3
       - name: Login to server and deploy source code
@@ -19,5 +19,5 @@ jobs:
           key: ${{secrets.FILE_PEM_PROD}}
           port: 22
           script: |
-            cd test/UITSport_AWS_Socket
+            cd ~/snap/LapTrinhWeb-Booking-Client
             yarn deploy
